@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Doodle — Air Mail</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@500;600;700&family=Inter:wght@400;500;600&family=Caveat:wght@500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body id="doodle-page">
+<header class="masthead">
+  <div class="masthead-row">
+    <div class="masthead-title">Doodle</div>
+    <div class="masthead-meta">one page, drawn on from two places at once</div>
+  </div>
+  <nav class="ticket-nav">
+    <a href="index.html">Home</a>
+    <a href="board.html">Bulletin Board</a>
+    <a href="calendar.html">Calendar</a>
+    <a href="doodle.html" aria-current="page">Doodle</a>
+    <a href="trivia.html">Trivia</a>
+  </nav>
+</header>
+
+<main class="wrap">
+  <div class="doodle-toolbar">
+    <div id="doodle-swatches" style="display:flex; gap:8px;"></div>
+    <label>Width <input id="doodle-width" type="range" min="1" max="18" value="4"></label>
+    <button id="doodle-clear" class="btn danger" type="button">Clear canvas</button>
+  </div>
+  <canvas id="doodle-canvas"></canvas>
+  <p id="doodle-status" style="margin-top:10px; font-size:0.85rem; color:var(--ink-soft);"></p>
+</main>
+
+<footer>drawings save automatically and appear live on the other end</footer>
+
+<script src="https://unpkg.com/@supabase/supabase-js@2"></script>
+<script src="js/config.js"></script>
+<script src="js/supabase-client.js"></script>
+<script src="js/doodle.js"></script>
+</body>
+</html>

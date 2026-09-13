@@ -1,0 +1,27 @@
+[
+  {
+    "question": "Where did we first meet?",
+    "options": ["Replace with the real answer", "Option B", "Option C", "Option D"],
+    "answerIndex": 0
+  },
+  {
+    "question": "What was playing the first time we danced together?",
+    "options": ["Option A", "Replace with the real answer", "Option C", "Option D"],
+    "answerIndex": 1
+  },
+  {
+    "question": "What's my go-to order at our favorite place?",
+    "options": ["Option A", "Option B", "Replace with the real answer", "Option D"],
+    "answerIndex": 2
+  },
+  {
+    "question": "What's the name of the city between us, roughly halfway?",
+    "options": ["Replace with the real answer", "Option B", "Option C", "Option D"],
+    "answerIndex": 0
+  },
+  {
+    "question": "What did I say I'd never do, and then did anyway?",
+    "options": ["Option A", "Option B", "Option C", "Replace with the real answer"],
+    "answerIndex": 3
+  }
+]

@@ -1,0 +1,376 @@
+/* ============================================================
+   Design tokens — "Air Mail" theme: two places, one correspondence.
+   Palette pulls from kraft paper, postage ink, and wax-seal red.
+   ============================================================ */
+:root {
+  --paper: #efe4cd;
+  --paper-light: #faf5ea;
+  --paper-deep: #e3d5b4;
+  --ink: #2a241d;
+  --ink-soft: #5a5044;
+  --navy: #263449;
+  --stamp-red: #b23a2e;
+  --sage: #6e7f5c;
+  --gold: #c1922f;
+  --line: rgba(42, 36, 29, 0.22);
+  --line-strong: rgba(42, 36, 29, 0.4);
+  --shadow: 0 6px 18px rgba(38, 30, 16, 0.16);
+
+  --font-display: "Fraunces", "Iowan Old Style", serif;
+  --font-body: "Inter", "Helvetica Neue", sans-serif;
+  --font-hand: "Caveat", cursive;
+
+  --radius: 3px;
+  --max-width: 980px;
+}
+
+* { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  font-family: var(--font-body);
+  color: var(--ink);
+  background-color: var(--paper);
+  background-image:
+    radial-gradient(rgba(42, 36, 29, 0.05) 1px, transparent 1px);
+  background-size: 5px 5px;
+  min-height: 100vh;
+  line-height: 1.55;
+}
+
+a { color: inherit; }
+
+h1, h2, h3 {
+  font-family: var(--font-display);
+  font-weight: 600;
+  line-height: 1.1;
+  margin: 0 0 0.4em;
+}
+
+p { max-width: 62ch; }
+
+button, input, textarea, select {
+  font-family: var(--font-body);
+}
+
+.wrap {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 24px 80px;
+}
+
+/* ---------- Header / masthead ---------- */
+.masthead {
+  padding: 28px 24px 0;
+  max-width: var(--max-width);
+  margin: 0 auto;
+}
+
+.masthead-row {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 8px;
+  border-bottom: 2px solid var(--ink);
+  padding-bottom: 14px;
+}
+
+.masthead-title {
+  font-size: clamp(1.7rem, 4vw, 2.4rem);
+  letter-spacing: 0.01em;
+}
+
+.masthead-meta {
+  font-size: 0.8rem;
+  color: var(--ink-soft);
+  font-style: italic;
+}
+
+/* ---------- Nav: ticket stubs ---------- */
+.ticket-nav {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin: 18px 0 30px;
+}
+
+.ticket-nav a {
+  position: relative;
+  text-decoration: none;
+  font-size: 0.92rem;
+  padding: 8px 16px;
+  background: var(--paper-light);
+  border: 1px solid var(--ink);
+  border-radius: var(--radius);
+  color: var(--ink);
+  transition: transform 0.15s ease, background 0.15s ease;
+}
+
+.ticket-nav a::before,
+.ticket-nav a::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  width: 8px;
+  height: 8px;
+  background: var(--paper);
+  border: 1px solid var(--ink);
+  border-radius: 50%;
+  transform: translateY(-50%);
+}
+.ticket-nav a::before { left: -5px; }
+.ticket-nav a::after { right: -5px; }
+
+.ticket-nav a:hover { background: var(--gold); transform: translateY(-2px); }
+
+.ticket-nav a[aria-current="page"] {
+  background: var(--navy);
+  color: var(--paper-light);
+}
+
+/* ---------- Postcard panel ---------- */
+.postcard {
+  background: var(--paper-light);
+  border: 1px solid var(--ink);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 28px 30px;
+  margin-bottom: 28px;
+  position: relative;
+}
+
+.postcard::before {
+  content: "";
+  position: absolute;
+  inset: 6px;
+  border: 1px dashed var(--line-strong);
+  pointer-events: none;
+  border-radius: 2px;
+}
+
+/* stamp corner decoration */
+.stamp {
+  position: absolute;
+  top: -14px;
+  right: 22px;
+  width: 54px;
+  height: 64px;
+  background: var(--paper);
+  border: 2px dotted var(--stamp-red);
+  transform: rotate(6deg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-display);
+  font-size: 0.7rem;
+  color: var(--stamp-red);
+  text-align: center;
+  box-shadow: var(--shadow);
+}
+
+/* ---------- Buttons ---------- */
+.btn {
+  display: inline-block;
+  font-family: var(--font-body);
+  font-size: 0.92rem;
+  font-weight: 600;
+  padding: 10px 18px;
+  border: 1px solid var(--ink);
+  border-radius: var(--radius);
+  background: var(--navy);
+  color: var(--paper-light);
+  cursor: pointer;
+  text-decoration: none;
+}
+.btn:hover { background: var(--ink); }
+.btn.secondary { background: var(--paper-light); color: var(--ink); }
+.btn.secondary:hover { background: var(--paper-deep); }
+.btn.danger { background: var(--stamp-red); border-color: var(--stamp-red); }
+
+input[type="text"], input[type="color"], textarea, select {
+  border: 1px solid var(--line-strong);
+  border-radius: var(--radius);
+  padding: 9px 11px;
+  background: var(--paper-light);
+  color: var(--ink);
+  font-size: 0.95rem;
+}
+textarea { resize: vertical; font-family: var(--font-hand); font-size: 1.25rem; }
+
+/* ---------- Bulletin board ---------- */
+.board {
+  position: relative;
+  min-height: 560px;
+  background: var(--paper-deep);
+  background-image:
+    repeating-linear-gradient(0deg, transparent, transparent 39px, rgba(42,36,29,0.06) 40px);
+  border: 1px solid var(--ink);
+  border-radius: var(--radius);
+  overflow: hidden;
+}
+
+.note {
+  position: absolute;
+  width: 190px;
+  padding: 14px 14px 34px;
+  background: var(--paper-light);
+  box-shadow: 2px 4px 10px rgba(0,0,0,0.22);
+  border-radius: 2px;
+  font-family: var(--font-hand);
+  font-size: 1.35rem;
+  line-height: 1.25;
+  cursor: grab;
+  transition: box-shadow 0.15s ease;
+}
+.note:active { cursor: grabbing; box-shadow: 4px 8px 18px rgba(0,0,0,0.3); }
+.note img { width: 100%; border-radius: 2px; margin-bottom: 8px; display: block; }
+.note .author {
+  position: absolute;
+  bottom: 8px;
+  right: 12px;
+  font-family: var(--font-body);
+  font-size: 0.7rem;
+  font-style: italic;
+  color: var(--ink-soft);
+}
+.note .pin {
+  position: absolute;
+  top: -8px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  box-shadow: inset -2px -2px 3px rgba(0,0,0,0.3);
+}
+.note .del {
+  position: absolute;
+  top: 4px;
+  right: 6px;
+  font-family: var(--font-body);
+  font-size: 0.75rem;
+  color: var(--ink-soft);
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 2px 5px;
+}
+.note .del:hover { color: var(--stamp-red); }
+
+.composer {
+  display: grid;
+  gap: 10px;
+  max-width: 420px;
+  margin-top: 18px;
+}
+
+/* ---------- Calendar legend ---------- */
+.legend {
+  display: flex;
+  gap: 18px;
+  flex-wrap: wrap;
+  margin: 10px 0 20px;
+  font-size: 0.9rem;
+}
+.legend span {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+.legend i {
+  width: 12px; height: 12px;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.calendar-frame {
+  width: 100%;
+  height: 640px;
+  border: 1px solid var(--ink);
+  border-radius: var(--radius);
+  background: var(--paper-light);
+}
+
+/* ---------- Doodle ---------- */
+.doodle-toolbar {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  flex-wrap: wrap;
+  margin-bottom: 14px;
+}
+.doodle-toolbar label { font-size: 0.85rem; color: var(--ink-soft); }
+#doodle-canvas {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  background: var(--paper-light);
+  border: 1px solid var(--ink);
+  border-radius: var(--radius);
+  touch-action: none;
+  cursor: crosshair;
+}
+.swatch {
+  width: 26px; height: 26px;
+  border-radius: 50%;
+  border: 2px solid var(--ink);
+  cursor: pointer;
+}
+.swatch.active { outline: 2px solid var(--gold); outline-offset: 2px; }
+
+/* ---------- Trivia ---------- */
+.quiz-progress {
+  font-size: 0.85rem;
+  color: var(--ink-soft);
+  margin-bottom: 6px;
+}
+.quiz-question {
+  font-family: var(--font-display);
+  font-size: 1.4rem;
+  margin-bottom: 18px;
+}
+.quiz-options {
+  display: grid;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+.quiz-option {
+  text-align: left;
+  padding: 12px 16px;
+  border: 1px solid var(--line-strong);
+  border-radius: var(--radius);
+  background: var(--paper);
+  cursor: pointer;
+  font-size: 1rem;
+}
+.quiz-option:hover { border-color: var(--ink); }
+.quiz-option.correct { background: #dfe8d4; border-color: var(--sage); }
+.quiz-option.incorrect { background: #f1d9d6; border-color: var(--stamp-red); }
+.quiz-feedback { font-style: italic; color: var(--ink-soft); min-height: 1.4em; margin-bottom: 14px; }
+.quiz-score { font-family: var(--font-display); font-size: 1.2rem; }
+
+/* ---------- Config notice ---------- */
+.notice {
+  border: 1px dashed var(--stamp-red);
+  background: #fbe9e6;
+  color: var(--ink);
+  padding: 12px 16px;
+  border-radius: var(--radius);
+  font-size: 0.88rem;
+  margin-bottom: 20px;
+}
+
+footer {
+  text-align: center;
+  font-size: 0.78rem;
+  color: var(--ink-soft);
+  padding: 30px 0 10px;
+  font-style: italic;
+}
+
+@media (max-width: 560px) {
+  .postcard { padding: 20px 18px; }
+  .note { width: 150px; font-size: 1.1rem; }
+}

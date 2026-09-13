@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Trivia — Air Mail</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@500;600;700&family=Inter:wght@400;500;600&family=Caveat:wght@500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header class="masthead">
+  <div class="masthead-row">
+    <div class="masthead-title">Trivia</div>
+    <div class="masthead-meta">questions only the two of you would get right</div>
+  </div>
+  <nav class="ticket-nav">
+    <a href="index.html">Home</a>
+    <a href="board.html">Bulletin Board</a>
+    <a href="calendar.html">Calendar</a>
+    <a href="doodle.html">Doodle</a>
+    <a href="trivia.html" aria-current="page">Trivia</a>
+  </nav>
+</header>
+
+<main class="wrap">
+  <div class="postcard">
+    <div class="quiz-progress" id="quiz-progress"></div>
+    <div class="quiz-question" id="quiz-question"></div>
+    <div class="quiz-options" id="quiz-options"></div>
+    <div class="quiz-feedback" id="quiz-feedback"></div>
+    <div class="quiz-score" id="quiz-score"></div>
+    <button class="btn" id="quiz-next" hidden>Next question →</button>
+    <button class="btn secondary" id="quiz-restart" hidden style="margin-top:10px;">Play again</button>
+  </div>
+  <p style="font-size:0.85rem; color:var(--ink-soft);">
+    Edit <code>data/questions.json</code> to write your own questions — no code needed,
+    just replace the questions, options, and mark which option index (starting at 0) is correct.
+  </p>
+</main>
+
+<footer>make it harder — add more questions any time</footer>
+
+<script src="js/trivia.js"></script>
+</body>
+</html>

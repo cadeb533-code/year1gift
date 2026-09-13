@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Calendar — Air Mail</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@500;600;700&family=Inter:wght@400;500;600&family=Caveat:wght@500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body id="calendar-page">
+<header class="masthead">
+  <div class="masthead-row">
+    <div class="masthead-title">Calendar</div>
+    <div class="masthead-meta">yours, hers, and the days that are both</div>
+  </div>
+  <nav class="ticket-nav">
+    <a href="index.html">Home</a>
+    <a href="board.html">Bulletin Board</a>
+    <a href="calendar.html" aria-current="page">Calendar</a>
+    <a href="doodle.html">Doodle</a>
+    <a href="trivia.html">Trivia</a>
+  </nav>
+</header>
+
+<main class="wrap">
+  <div id="calendar-legend" class="legend"></div>
+  <iframe id="calendar-frame" class="calendar-frame" frameborder="0" scrolling="no"></iframe>
+  <p style="margin-top:14px; font-size:0.85rem; color:var(--ink-soft);">
+    Add events straight into Google Calendar (app or web) — anything on your calendar,
+    hers, or the shared one shows up here automatically in its own color.
+  </p>
+</main>
+
+<footer>events sync from Google Calendar — no need to touch this page to add one</footer>
+
+<script src="js/config.js"></script>
+<script src="js/calendar.js"></script>
+</body>
+</html>

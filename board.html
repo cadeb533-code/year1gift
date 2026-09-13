@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Bulletin Board — Air Mail</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@500;600;700&family=Inter:wght@400;500;600&family=Caveat:wght@500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body id="board-page">
+<header class="masthead">
+  <div class="masthead-row">
+    <div class="masthead-title">Bulletin Board</div>
+    <div class="masthead-meta">pin a note, tack up a photo, drag it wherever</div>
+  </div>
+  <nav class="ticket-nav">
+    <a href="index.html">Home</a>
+    <a href="board.html" aria-current="page">Bulletin Board</a>
+    <a href="calendar.html">Calendar</a>
+    <a href="doodle.html">Doodle</a>
+    <a href="trivia.html">Trivia</a>
+  </nav>
+</header>
+
+<main class="wrap">
+  <div id="board" class="board"></div>
+
+  <div class="postcard" style="margin-top:26px;">
+    <h3>Pin something new</h3>
+    <form id="note-form" class="composer">
+      <select id="note-author" required></select>
+      <textarea id="note-message" rows="3" placeholder="Write your note…"></textarea>
+      <input id="note-photo" type="file" accept="image/*">
+      <button class="btn" type="submit">Pin it</button>
+    </form>
+    <p id="board-status" style="margin-top:10px; font-size:0.85rem; color:var(--ink-soft);"></p>
+  </div>
+</main>
+
+<footer>drag a note to move it — it saves where you drop it</footer>
+
+<script src="https://unpkg.com/@supabase/supabase-js@2"></script>
+<script src="js/config.js"></script>
+<script src="js/supabase-client.js"></script>
+<script src="js/board.js"></script>
+</body>
+</html>
