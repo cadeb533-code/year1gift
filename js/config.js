@@ -22,17 +22,17 @@ const CONFIG = {
     yours: {
       id: "your-calendar-id@group.calendar.google.com",
       color: "2952A3", // hex without '#', pick from Google's palette (see README)
-      label: "Yours",
+      label: "Cade's",
     },
     hers: {
       id: "her-calendar-id@group.calendar.google.com",
       color: "B23A2E",
-      label: "Hers",
+      label: "Claudia's",
     },
     shared: {
       id: "shared-calendar-id@group.calendar.google.com",
       color: "6E7F5C",
-      label: "Shared",
+      label: "Ours",
     },
   },
 };

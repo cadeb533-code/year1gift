@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Timeline — Air Mail</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@500;600;700&family=Inter:wght@400;500;600&family=Caveat:wght@500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body id="timeline-page">
+<header class="masthead">
+  <div class="masthead-row">
+    <div class="masthead-title">Timeline</div>
+    <div class="masthead-meta">the story so far, pinned up in order</div>
+  </div>
+  <nav class="ticket-nav">
+    <a href="index.html">Home</a>
+    <a href="timeline.html" aria-current="page">Timeline</a>
+    <a href="board.html">Bulletin Board</a>
+    <a href="calendar.html">Calendar</a>
+    <a href="doodle.html">Doodle</a>
+    <a href="trivia.html">Trivia</a>
+  </nav>
+</header>
+
+<main class="wrap">
+  <p class="timeline-intro">Click any photo for the full story behind it.</p>
+
+  <div id="timeline-list" class="timeline"></div>
+
+  <div class="postcard" style="margin-top:10px;">
+    <h3>Add a moment</h3>
+    <form id="timeline-form" class="composer">
+      <select id="timeline-author" required></select>
+      <input id="timeline-title" type="text" placeholder="What happened? (e.g. Our first trip together)" required>
+      <input id="timeline-date-input" type="date" required>
+      <input id="timeline-caption" type="text" placeholder="Short caption under the photo (e.g. Big Sur, day 2)">
+      <textarea id="timeline-description" rows="4" placeholder="The full story — as much detail as you want."></textarea>
+      <input id="timeline-photo" type="file" accept="image/*">
+      <button class="btn" type="submit">Pin to the timeline</button>
+    </form>
+    <p id="timeline-status" style="margin-top:10px; font-size:0.85rem; color:var(--ink-soft);"></p>
+  </div>
+</main>
+
+<footer>the thread runs in order — newest moments just keep extending it</footer>
+
+<div id="timeline-modal" class="modal-overlay" hidden>
+  <div class="modal-card">
+    <button id="modal-close" class="modal-close" aria-label="Close">✕</button>
+    <img id="modal-img" alt="">
+    <div class="modal-date" id="modal-date"></div>
+    <h2 id="modal-title"></h2>
+    <p id="modal-description"></p>
+    <div class="modal-author" id="modal-author"></div>
+  </div>
+</div>
+
+<script src="https://unpkg.com/@supabase/supabase-js@2"></script>
+<script src="js/config.js"></script>
+<script src="js/supabase-client.js"></script>
+<script src="js/timeline.js"></script>
+</body>
+</html>
