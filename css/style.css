@@ -571,6 +571,46 @@ textarea { resize: vertical; font-family: var(--font-hand); font-size: 1.25rem; 
   }
 }
 
+/* ---------- Password gate ---------- */
+#gate-overlay {
+  position: fixed;
+  inset: 0;
+  background: var(--paper);
+  background-image: radial-gradient(rgba(42, 36, 29, 0.05) 1px, transparent 1px);
+  background-size: 5px 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+  padding: 24px;
+}
+.gate-card {
+  background: var(--paper-light);
+  border: 1px solid var(--ink);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 34px 30px;
+  max-width: 340px;
+  width: 100%;
+  text-align: center;
+}
+.gate-card h2 {
+  font-size: 1.3rem;
+  margin-bottom: 18px;
+}
+.gate-card form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.gate-error {
+  color: var(--stamp-red);
+  font-size: 0.85rem;
+  font-style: italic;
+  min-height: 1.2em;
+  margin-top: 10px;
+}
+
 footer {
   text-align: center;
   font-size: 0.78rem;
