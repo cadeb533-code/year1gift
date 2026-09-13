@@ -9,6 +9,9 @@ const CONFIG = {
   yourName: "Cade",
   herName: "Claudia",
 
+  // password stuff
+  sitePasswordHash: "2742e707a32552b364295e9bc751b0d6ed0f37f37aa1fbab0be7dc6dcd3a89c8",
+
   // --- Supabase project (README step 2) ---
   // Project Settings -> API in your Supabase dashboard.
   supabaseUrl: "https://ozhdwdsbvffbkenfkxmt.supabase.co",
@@ -35,6 +38,5 @@ const CONFIG = {
       label: "Ours",
     },
   },
-  sitePasswordHash: "2742e707a32552b364295e9bc751b0d6ed0f37f37aa1fbab0be7dc6dcd3a89c8",
 };
 
