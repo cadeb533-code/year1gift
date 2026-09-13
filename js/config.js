@@ -11,8 +11,8 @@ const CONFIG = {
 
   // --- Supabase project (README step 2) ---
   // Project Settings -> API in your Supabase dashboard.
-  supabaseUrl: "https://YOUR-PROJECT-REF.supabase.co",
-  supabaseAnonKey: "YOUR-ANON-PUBLIC-KEY",
+  supabaseUrl: "https://ozhdwdsbvffbkenfkxmt.supabase.co/rest/v1/",
+  supabaseAnonKey: "sb_publishable_IthSeTfWlewpJgE-wEWXNw_RNT1uqST",
 
   // --- Google Calendar (README step 3) ---
   // Create 3 calendars (yours, hers, shared), make each "public",
