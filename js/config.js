@@ -11,7 +11,7 @@ const CONFIG = {
 
   // --- Supabase project (README step 2) ---
   // Project Settings -> API in your Supabase dashboard.
-  supabaseUrl: "https://ozhdwdsbvffbkenfkxmt.supabase.co/rest/v1/",
+  supabaseUrl: "https://ozhdwdsbvffbkenfkxmt.supabase.co",
   supabaseAnonKey: "sb_publishable_IthSeTfWlewpJgE-wEWXNw_RNT1uqST",
 
   // --- Google Calendar (README step 3) ---
