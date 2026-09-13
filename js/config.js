@@ -6,8 +6,8 @@
 
 const CONFIG = {
   // --- Names shown around the site ---
-  yourName: "You",
-  herName: "Her",
+  yourName: "Cade",
+  herName: "Claudia",
 
   // --- Supabase project (README step 2) ---
   // Project Settings -> API in your Supabase dashboard.
